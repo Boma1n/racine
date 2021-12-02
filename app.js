@@ -5,7 +5,7 @@ const config = require('./app/config');
 const path = require('path');
 const sassMiddleware = require('node-sass-middleware-5');
 
-app.set('views', path.join(__dirname, 'templates'));
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 app.use(express.static(path.join(__dirname, 'public')));
