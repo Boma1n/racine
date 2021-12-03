@@ -1,5 +1,5 @@
 module.exports = class Home {
   print (req, res) {
-    res.render('./front/home');
+    res.render('./front/pages/home');
   };
 }

@@ -1,0 +1,67 @@
+.navigation {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10.9rem;
+  width: 100%;
+}
+
+.navigation--primary {
+  align-items: flex-end;
+  display: flex;
+  gap: 1.6rem;
+}
+
+.navigation--logo {
+  display: flex;
+}
+
+.navigation--logoImg {
+
+}
+
+.navigation--linkTitle {
+
+}
+
+.navigation--title {
+  @extend %title-32-b;
+  text-transform: uppercase;
+}
+
+.navigation--links {
+  display: flex;
+}
+
+.navigation--list {
+  display: flex;
+  gap: 3.2rem;
+}
+
+.navigation--li {
+
+}
+
+.navigation--link {
+  @extend %title-22;
+}
+
+.navigation--secondary {
+  display: flex;
+}
+
+.navigation--dashboard {
+
+}
+
+.navigation--profile {
+
+}
+
+.navigation--basket {
+
+}
+
+.navigation--icon {
+
+}

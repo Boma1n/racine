@@ -1,0 +1,35 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: calc(100vw / 1920 * 10);
+  line-height: 1;
+}
+
+body {
+  @extend %description-16;
+
+  font-family: $font-neue-montreal;
+  color: $color-black;
+}
+
+a {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+img {
+  vertical-align: middle;
+}

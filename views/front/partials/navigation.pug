@@ -1,14 +1,25 @@
 nav.navigation
-  .navigation__primary
-    .navigation__logo
-      img(src='' alt='')
-      a(href='/')
-        h1 Racine
-    .navigation__links
-  .navigation__secondary
-    a(href='/').navigation__dashboard Dashboard
-      img(src='' alt='logo dashboard')
-    a(href='/').navigation__profile Profile
-      img(src='' alt='logo profile')
-    a(href='/').navigation__basket Basket
-      img(src='' alt='logo basket')
+  .navigation--primary
+    .navigation--logo
+      img(src='' alt='').navigation--logoImg
+      a(href='/').navigation--linkTitle
+        h1.navigation--title Racine
+    .navigation--links
+      ul.navigation--list
+        li.navigation--li
+          a(href='').navigation--link e-Shop
+        li.navigation--li
+          a(href='').navigation--link Evenements
+        li.navigation--li
+          a(href='').navigation--link La Racinerie
+        li.navigation--li
+          a(href='').navigation--link La Team
+        li.navigation--li
+          a(href='').navigation--link FAQ
+  .navigation--secondary
+    a(href='/').navigation--dashboard
+      img(src='dashboard_icon.svg' alt='logo dashboard').navigation--icon
+    a(href='/').navigation--profile
+      img(src='' alt='logo profile').navigation--icon
+    a(href='/').navigation--basket
+      img(src='' alt='logo basket').navigation--icon
