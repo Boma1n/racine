@@ -22,7 +22,7 @@ module.exports = {
       patterns: [
         {
           from: './shared',
-          to: ''
+          to: './shared'
         }
       ]
     }),

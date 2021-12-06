@@ -1,0 +1,64 @@
+.authenticated {
+  display: flex;
+  justify-content: center;
+  margin-top: 19.7rem;
+}
+
+.authenticated--subscription {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 9.6rem;
+  min-width: 64rem;
+}
+
+.authenticated--login {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 9.6rem;
+  min-width: 64rem;
+}
+
+.authenticated--subtitle {
+  font-size: 4.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.authenticated--form {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  justify-content: center;
+}
+
+.authenticated--select {
+  border: 0;
+  border-bottom-color: $color-black;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  padding: .8rem;
+  width: 25rem;
+}
+
+.authenticated--option {
+
+}
+
+.authenticated--input {
+  border: 0;
+  border-bottom-color: $color-black;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  padding: .8rem;
+  width: 25rem;
+}
+
+.authenticated--button {
+  border: 2px solid #232323;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: .8rem 0;
+  text-transform: uppercase;
+}
