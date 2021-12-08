@@ -4,6 +4,22 @@
   box-sizing: border-box;
 }
 
+select:active {
+  outline: none;
+}
+
+select:focus {
+  outline: none;
+}
+
+input:active {
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+}
+
 html {
   font-size: calc(100vw / 1920 * 10);
   line-height: 1;
