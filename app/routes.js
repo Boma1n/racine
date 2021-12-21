@@ -10,4 +10,8 @@ module.exports = app => {
     const Authenticated = require('./pages/Authenticated');
     (new Authenticated()).print(req, res);
   })
+
+  app.post('/subscription', (req, res) => {
+
+  });
 }
