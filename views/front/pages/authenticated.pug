@@ -4,7 +4,10 @@ block variables
   - var template = 'authenticated'
 
 block content
+
   main
+    if error
+      p= error
     .authenticated
       .authenticated--subscription
         h2.authenticated--subtitle Inscription
@@ -16,6 +19,7 @@ block content
           input.authenticated--input(type='text' placeholder='Prénom' name='firstname')
           input.authenticated--input(type='text' placeholder='Nom' name='lastname')
           input.authenticated--input(type='email' placeholder='Email' name='email')
+
           input.authenticated--input(type='password' placeholder='Mot de passe' name='password')
           input.authenticated--input(type='phone' placeholder='N° de téléphone' name='phone')
           button.authenticated--button(type='submit') S'inscrire

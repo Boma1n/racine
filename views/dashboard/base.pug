@@ -1,0 +1,28 @@
+block variables
+
+- var messages = getMessages()
+
+doctype html
+html(lang='fr')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+
+    base(href="/")
+
+    link(href="main.css" rel="stylesheet")
+
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
+    title Racine
+  body
+    header
+      if messages.notify
+        each msg in messages.notify
+          .alert= msg
+      if messages.error
+        each msg in messages.error
+          .alert= msg
+
+  .content#content(data-template=template)
+    block content

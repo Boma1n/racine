@@ -1,5 +1,7 @@
 block variables
 
+- var messages = getMessages()
+
 doctype html
 html(lang='fr')
   head
@@ -16,8 +18,12 @@ html(lang='fr')
   body
     header
       include ./partials/navigation.pug
+      if messages.notify
+        each msg in messages.notify
+          .alert= msg
+      if messages.error
+        each msg in messages.error
+          .alert= msg
 
   .content#content(data-template=template)
     block content
-
-  script(src='main.js')

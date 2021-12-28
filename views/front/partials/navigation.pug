@@ -9,16 +9,20 @@ nav.navigation
         li.navigation--li
           a(href='').navigation--link e-Shop
         li.navigation--li
-          a(href='').navigation--link Evenements
+          a(href='/Events').navigation--link Evenements
         li.navigation--li
-          a(href='').navigation--link La Racinerie
+          a(href='/stores').navigation--link La Racinerie
         li.navigation--li
-          a(href='').navigation--link La Team
+          a(href='/team').navigation--link La Team
         li.navigation--li
-          a(href='').navigation--link FAQ
+          a(href='/faq').navigation--link FAQ
   .navigation--secondary
-    if isAdmin
-      a(href='/').navigation--dashboard
+    if session && session.user
+      a(href='/logout').navigation--Logout Logout
+    else
+      a(href='/authenticated').navigation--authentification Login / Sign in
+    if session && session.admin
+      a(href='/dashboard').navigation--dashboard
         svg.navigation--icon(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32')
           path.navigation--path(d="M4 17.3333H14.6667V4H4V17.3333ZM4 28H14.6667V20H4V28ZM17.3333 28H28V14.6667H17.3333V28ZM17.3333 4V12H28V4H17.3333Z" fill="#232323")
     a(href='/authenticated').navigation--profile
