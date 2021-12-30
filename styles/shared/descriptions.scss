@@ -2,8 +2,23 @@
   font-family: $font-neue-montreal;
   font-size: 3.2rem;
 }
+%description-32-b {
+  font-family: $font-neue-montreal;
+  font-size: 3.2rem;
+  font-weight: bold;
+}
 
 %description-16 {
   font-family: $font-neue-montreal;
   font-size: 1.6rem;
+}
+%description-16-b {
+  font-family: $font-neue-montreal;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+%description-12 {
+  font-family: $font-neue-montreal;
+  font-size: 1.2rem;
 }

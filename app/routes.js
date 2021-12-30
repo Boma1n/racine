@@ -5,6 +5,42 @@ module.exports = app => {
     (new Home()).print(req, res);
   });
 
+  // E-Shop
+  app.get('/eShop', (req, res) => {
+    const Eshop = require('./pages/Eshop');
+    (new Eshop()).print(req, res);
+  });
+
+  // Events
+  app.get('/events', (req, res) => {
+    const Events = require('./pages/Events');
+    (new Events()).print(req, res);
+  });
+
+  // Shop
+  app.get('/stores', (req, res) => {
+    const Stores = require('./pages/Stores');
+    (new Stores()).print(req, res);
+  });
+
+  // Team
+  app.get('/team', (req, res) => {
+    const Team = require('./pages/Team');
+    (new Team()).print(req, res);
+  });
+
+  // FAQ
+  app.get('/faq', (req, res) => {
+    const Faq = require('./pages/Faq');
+    (new Faq()).print(req, res);
+  });
+
+  // Basket
+  app.get('/basket', (req, res) => {
+    const Basket = require('./pages/Basket');
+    (new Basket()).print(req, res);
+  });
+
   // Dashboard
   app.get('/dashboard', (req, res) => {
     const Dashboard = require('./pages/Dashboard');

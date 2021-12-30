@@ -1,13 +1,145 @@
 .home--wrapper {
+  padding: 3.2rem;
+}
+
+.home--secondaryTitle {
+  @extend %title-64-b;
 }
 
 .home--picture {
   height: 90rem;
-  margin: 3.2rem;
   overflow: hidden;
 }
 
 .home__img {
   height: auto;
   width: 100%;
+}
+
+// Need advice
+.home--needAdvice {
+  padding: 0 18.9rem;
+}
+
+.home--secondaryTitle {
+
+}
+
+.home--needAdviceList {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home--needAdviceElement {
+  background-color: $color-cornflowerBlue;
+  padding: 3.2rem;
+}
+
+.home--needAdviceImgWrapper {
+  background-color: $color-black;
+  height: 40rem;
+  width: 40rem;
+}
+
+.home--needAdviceImg {
+
+}
+
+.home--needAdviceContent {
+
+}
+
+.home--needAdviceTag {
+  @extend %description-12;
+  text-transform: uppercase;
+}
+
+.home--needAdviceTitle {
+  @extend %description-16-b;
+}
+
+// Newsletter
+.home--newsletter {
+  background-color: $color-cornflowerBlue;
+  display: flex;
+  flex-direction: column;
+  height: 27rem;
+  align-items: center;
+  justify-content: center;
+  gap: 2.4rem;
+}
+
+.home--newsletterInputWrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.home--newsletterTitle {
+  @extend %description-32-b;
+}
+
+.home--newsletterForm {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.home--newsletterInput {
+  background-color: transparent;
+  border: 0;
+  border-bottom-color: $color-black;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  padding: .8rem;
+  width: 25rem;
+}
+
+.home--newsletterButton {
+  border: 2px solid #232323;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 0.8rem 2.4rem;
+  text-transform: uppercase;
+}
+
+// Our Engagement
+.home--ourEngagement {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  padding: 0 15.7rem;
+}
+
+.home--ourEngagementList {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home--engagementElement {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.home--engagementImg {
+  background-color: $color-black;
+  border-radius: 50%;
+  height: 25.1rem;
+  width: 25.1rem;
+}
+
+.home--engagementText {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.home--engagementTitle {
+  @extend %title-32-b;
+}
+
+.home--engagementDescription {
+  @extend %description-16;
 }
