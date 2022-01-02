@@ -3,4 +3,15 @@ extends ../base.pug
 block content
   main
     .eshop--wrapper
-      h1 E-Shop Page
+      ul.eshop--productList
+        each product, key in products
+          li.eshop--productWrapper
+            .eshop--productTagWrapper
+              p.eshop--productFamily= product.family
+            .eshop--productImgWrapper
+              img.eshop--productImg(src='' alt='')
+            .eshop--productContentWrapper
+              p.eshop--productTitle= product.name
+              p.eshop--productDescription= product.commonName
+            .eshop--productBtnWrapper
+              a.eshop--productBtn(href='')= `Voir plus - ${product.price}`

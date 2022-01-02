@@ -1,0 +1,93 @@
+.headerdh--wrapper {
+  display: flex;
+}
+
+.headerdh--adside {
+  background-color: $color-black;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  height: 100vh;
+  padding: 1.6rem;
+  width: fit-content;
+}
+
+.headerdh--logo {
+  align-items: center;
+  display: flex;
+  gap: 1.6rem;
+}
+
+.headerdh--iconTitle {
+  align-items: center;
+  display: flex;
+  width: 4.2rem;
+}
+
+.headerdh--icon {
+  align-items: center;
+  display: flex;
+}
+
+.headerdh--title {
+  @extend %title-32-b;
+  color: $color-white;
+  text-transform: uppercase;
+}
+
+.headerdh--listLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.headerdh--listElement {
+  align-items: center;
+  display: flex;
+  gap: 1.6rem;
+}
+
+.headerdh--logoWrapper {
+  height: 3.2rem;
+  width: 3.2rem;
+}
+
+.headerdh--listName {
+  @extend %description-16;
+  color: $color-white;
+}
+
+.headerdh--content {
+  width: 100%;
+}
+
+.headerdh--topbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.6rem;
+  width: 100%;
+}
+
+.headerdh--topbarLink {
+  @extend %description-16;
+}
+
+.headerdh--topbarIcons {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.headerdh--topbarNotif {
+  background-color: $color-black;
+  border-radius: 50%;
+  height: 3.2rem;
+  width: 3.2rem;
+}
+
+.headerdh--topbarProfil {
+  background-color: $color-black;
+  border-radius: 50%;
+  height: 3.2rem;
+  width: 3.2rem;
+}

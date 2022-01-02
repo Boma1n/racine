@@ -1,0 +1,20 @@
+extends ../base.pug
+
+block content
+  main
+    .productsAdd--wrapper
+      form(method='post')
+        input(type='text' placeholder='Nom...' name='name' value=product.name)
+        input(type='number' placeholder='Taille...' name='size' value=product.size)
+        input(type='text' placeholder='Nom Scientifique...' name='scientifiqueName' value=product.scientifiqueName)
+        input(type='text' placeholder='Nom Commun...' name='commonName' value=product.commonName)
+        input(type='text' placeholder='Famille...' name='family' value=product.family)
+        input(type='text' placeholder='Origine...' name='origin' value=product.origin)
+        input(type='text' placeholder='Emplacement...' name='location' value=product.location)
+        input(type='text' placeholder='Description...' name='description' value=product.description)
+
+        input(type='text' placeholder='Exposition...' name='exposure' value=product.exposure)
+        input(type='text' placeholder='Arrosage...' name='watering' value=product.watering)
+        input(type='text' placeholder='Rempotage...' name='repotting' value=product.repotting)
+        input(type='number' placeholder='Prix...' name='price' value=product.price)
+        button.authenticated--button(type='submit') Ajouter

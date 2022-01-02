@@ -1,0 +1,24 @@
+extends ../base.pug
+
+block content
+  main
+    .products--wrapper
+      .products--addBtn
+        a.products--addLink(href='/dashboard/products/add')= 'Ajouter un produit'
+
+      .products--tableWrapper
+        table.products--table
+          thead.products--tableThead
+            tr.products--tableTr
+              td.products--tableTd= 'Nom'
+              td.products--tableTd= 'Tags'
+              td.products--tableTd= 'Prix'
+          tbody.products--tableTbody
+            each product, key in products ? products : []
+              tr.products--tableTr
+                td.products--tableTd= product.name
+                td.products--tableTd= product.origin
+                td.products--tableTd= product.price
+                td.products--tableTd
+                  a.products--tableLink(href=`/dashboard/products/edit/${product._id}`)= 'Modifier'
+                  a.products--tableLink(href=`/dashboard/products/delete/${product._id}`)= 'Supprimer'

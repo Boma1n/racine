@@ -1,0 +1,52 @@
+.products--wrapper {
+
+}
+
+.products--addBtn {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 1.6rem;
+}
+
+.products--addLink {
+  @extend %description-16-b;
+  background-color: $color-black;
+  color: $color-white;
+  padding: 0.8rem 1.6rem;
+  text-transform: uppercase;
+}
+
+.products--tableWrapper {
+  padding: 1.6rem;
+}
+
+.products--table {
+  width: 100%;
+}
+
+.products--tableThead {
+
+  .products--tableTr {
+    border: 2px solid $color-black;
+  }
+  .products--tableTd{
+    @extend %description-16-b;
+    padding: 1.6rem;
+  }
+}
+
+.products--tableTbody {
+  border: 2px solid $color-black;
+  .products--tableTr {
+    background-color: $color-cornflowerBlue;
+  }
+  .products--tableTd {
+    @extend %description-16;
+    padding: 1.6rem;
+  }
+  .products--tableLink {
+    @extend %description-16-b;
+    padding: 1.6rem;
+  }
+}

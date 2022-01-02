@@ -1,0 +1,60 @@
+.eshop--productList {
+  display: flex;
+  gap: 3.2rem;
+  margin: 9.2rem 18.9rem;
+}
+
+.eshop--productWrapper {
+  background-color: $color-cornflowerBlue;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding: 1.6rem;
+  width: 28.3rem;
+}
+
+.eshop--productTagWrapper {
+
+}
+
+.eshop--productFamily {
+  @extend %description-12;
+}
+
+.eshop--productImgWrapper {
+  background-color: $color-black;
+  height: 25.1rem;
+  width: 25.1rem;
+}
+
+.eshop--productImg {
+
+}
+
+.eshop--productContentWrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.eshop--productTitle {
+  @extend %description-16-b;
+}
+
+.eshop--productDescription {
+  @extend %description-16;
+}
+
+.eshop--productBtnWrapper {
+  align-items: center;
+  border: 2px solid $color-black;
+  display: flex;
+  justify-content: center;
+  padding: 0.8rem 0;
+}
+
+.eshop--productBtn {
+  @extend %description-16-b;
+  text-transform: uppercase;
+}

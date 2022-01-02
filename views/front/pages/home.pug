@@ -8,27 +8,78 @@ block content
     .home--wrapper
       .home--picture
         img.home__img(src='./shared/images/home_front_page.jpg' alt='picture')
+      .home--bestsellers
+        h2.home--secondaryTitle= 'Produits du moments'
+        .home--bestsellersContent
+          ul.home--bestsellersList
+            li.home--bestsellersElement
+              p.home--bestsellersTag= 'Populaire'
+              .home--bestsellersImgWrapper
+                img.home--bestsellersImg(src='' alt='')
+              p.home--bestsellersName= 'Lenten Rose Plants'
+              .home--bestsellersAdvicesWrapper
+                p.home--bestsellersAdvices= '6 avis'
+              button.home--bestsellersButton= 'Ajouter - 6€'
+            li.home--bestsellersElement
+              p.home--bestsellersTag= 'Populaire'
+              .home--bestsellersImgWrapper
+                img.home--bestsellersImg(src='' alt='')
+              p.home--bestsellersName= 'Sweet Woodruff'
+              .home--bestsellersAdvicesWrapper
+                p.home--bestsellersAdvices= '6 avis'
+              button.home--bestsellersButton= 'Ajouter - 6€'
+            li.home--bestsellersElement
+              p.home--bestsellersTag= 'Nouveau'
+              .home--bestsellersImgWrapper
+                img.home--bestsellersImg(src='' alt='')
+              p.home--bestsellersName= 'Tree Hydrangea'
+              .home--bestsellersAdvicesWrapper
+                p.home--bestsellersAdvices= '6 avis'
+              button.home--bestsellersButton= 'Ajouter - 6€'
+            li.home--bestsellersElement
+              p.home--bestsellersTag= 'Nouveau'
+              .home--bestsellersImgWrapper
+                img.home--bestsellersImg(src='' alt='')
+              p.home--bestsellersName= 'Barrenwort'
+              .home--bestsellersAdvicesWrapper
+                p.home--bestsellersAdvices= '6 avis'
+              button.home--bestsellersButton= 'Ajouter - 6€'
+            li.home--bestsellersElement
+              p.home--bestsellersTag= 'Restock'
+              .home--bestsellersImgWrapper
+                img.home--bestsellersImg(src='' alt='')
+              p.home--bestsellersName= 'Purple Fountain Grass'
+              .home--bestsellersAdvicesWrapper
+                p.home--bestsellersAdvices= '6 avis'
+              button.home--bestsellersButton= 'Ajouter - 6€'
+      .home--quote
+        .home--leftQuote
+          svg.footer--icon(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48')
+            path(d="M33.6945 23.5611C36.3341 23.5611 38.4519 24.2671 40.0479 25.6789C41.6439 27.0294 42.4419 28.9324 42.4419 31.3878C42.4419 33.7818 41.6746 35.6847 40.14 37.0966C38.6053 38.5085 36.641 39.2144 34.247 39.2144C31.4846 39.2144 29.3975 38.2629 27.9857 36.36C26.5738 34.3956 25.8679 31.664 25.8679 28.165C25.8679 22.8245 27.249 18.4662 30.0114 15.09C32.7737 11.7138 36.6103 9.68806 41.5211 9.01282V15.4583C39.2499 15.7652 37.3776 16.7167 35.9044 18.3127C34.4311 19.9087 33.6945 21.6582 33.6945 23.5611ZM13.4373 23.5611C16.0769 23.5611 18.1947 24.2671 19.7907 25.6789C21.3867 27.0294 22.1848 28.9324 22.1848 31.3878C22.1848 33.7818 21.4174 35.6847 19.8828 37.0966C18.3482 38.5085 16.3838 39.2144 13.9898 39.2144C11.2275 39.2144 9.14037 38.2629 7.72851 36.36C6.31665 34.3956 5.61072 31.664 5.61072 28.165C5.61072 22.8245 6.99189 18.4662 9.75423 15.09C12.5166 11.7138 16.3531 9.68806 21.264 9.01282V15.4583C18.9927 15.7652 17.1205 16.7167 15.6472 18.3127C14.174 19.9087 13.4373 21.6582 13.4373 23.5611Z" fill="#232323")
+        .home--rightQuote
+          svg.footer--icon(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48')
+            path(d="M14.3055 24.4389C11.6659 24.4389 9.54814 23.7329 7.95212 22.3211C6.35611 20.9706 5.5581 19.0676 5.5581 16.6122C5.5581 14.2182 6.32542 12.3153 7.86005 10.9034C9.39468 9.49154 11.359 8.78561 13.753 8.78561C16.5154 8.78561 18.6025 9.73708 20.0143 11.64C21.4262 13.6044 22.1321 16.336 22.1321 19.835C22.1321 25.1755 20.751 29.5338 17.9886 32.91C15.2263 36.2862 11.3897 38.3119 6.47887 38.9872L6.47887 32.5417C8.75013 32.2348 10.6224 31.2833 12.0956 29.6873C13.5689 28.0913 14.3055 26.3418 14.3055 24.4389ZM34.5627 24.4389C31.9231 24.4389 29.8053 23.7329 28.2093 22.3211C26.6133 20.9706 25.8153 19.0676 25.8153 16.6122C25.8153 14.2182 26.5826 12.3153 28.1172 10.9034C29.6518 9.49154 31.6162 8.78561 34.0102 8.78561C36.7725 8.78561 38.8596 9.73708 40.2715 11.64C41.6834 13.6044 42.3893 16.336 42.3893 19.835C42.3893 25.1755 41.0081 29.5338 38.2458 32.91C35.4834 36.2862 31.6469 38.3119 26.736 38.9872L26.736 32.5417C29.0073 32.2348 30.8795 31.2833 32.3528 29.6873C33.826 28.0913 34.5627 26.3418 34.5627 24.4389Z" fill="#232323")
+        .home--quoteContent
+          p.home--quoteDescription= 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id eget neque, sed. Magna in eget diam tempus at lectus augue.'
+          p.home--quoteAuthor= 'Calvin J. Rodriguez'
       .home--needAdvice
         h2.home--secondaryTitle= 'Besoin de conseils ?'
         ul.home--needAdviceList
           li.home--needAdviceElement
             .home--needAdviceImgWrapper
               img.home--needAdviceImg(src='' alt='')
-            .home--needAdviceContent
-              p.home--needAdviceTag= 'Conseils'
-              p.home--needAdviceTitle= 'Comment prendre soin de ses plantes'
+            p.home--needAdviceTag= 'Conseils'
+            p.home--needAdviceTitle= 'Comment prendre soin de ses plantes'
           li.home--needAdviceElement
             .home--needAdviceImgWrapper
               img.home--needAdviceImg(src='' alt='')
-            .home--needAdviceContent
-              p.home--needAdviceTag= 'Conseils'
-              p.home--needAdviceTitle= 'Comment prendre soin de ses plantes'
+            p.home--needAdviceTag= 'Conseils'
+            p.home--needAdviceTitle= 'Comment prendre soin de ses plantes'
           li.home--needAdviceElement
             .home--needAdviceImgWrapper
               img.home--needAdviceImg(src='' alt='')
-            .home--needAdviceContent
-              p.home--needAdviceTag= 'Conseils'
-              p.home--needAdviceTitle= 'Comment prendre soin de ses plantes'
+            p.home--needAdviceTag= 'Conseils'
+            p.home--needAdviceTitle= 'Comment prendre soin de ses plantes'
       .home--newsletter
         .home--newsletterInputWrapper
           h3.home--newsletterTitle= 'Abonnez-vous à nos news et profitez de 10% offerts !'
