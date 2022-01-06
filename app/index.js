@@ -4,6 +4,11 @@ import Home from './pages/front/Home';
 import Events from './pages/front/Events';
 import Eshop from './pages/front/Eshop';
 import Product from './pages/front/Product';
+import Stores from './pages/front/Stores';
+import Team from './pages/front/Team';
+import Faq from './pages/front/Faq';
+import Basket from './pages/front/Basket';
+import Authenticated from './pages/front/Authenticated';
 
 class App {
   constructor() {
@@ -23,6 +28,11 @@ class App {
       events: new Events(),
       eshop: new Eshop(),
       product: new Product(),
+      stores: new Stores(),
+      team: new Team(),
+      faq: new Faq(),
+      basket: new Basket(),
+      authenticated: new Authenticated(),
     }
 
     this.page = this.pages[this.template]

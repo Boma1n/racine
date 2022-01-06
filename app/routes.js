@@ -1,35 +1,5 @@
 module.exports = app => {
 
-  // Events
-  app.get('/events', (req, res) => {
-    const Events = require('./pages/front/Events');
-    (new Events()).print(req, res);
-  });
-
-  // Shop
-  app.get('/stores', (req, res) => {
-    const Stores = require('./pages/front/Stores');
-    (new Stores()).print(req, res);
-  });
-
-  // Team
-  app.get('/team', (req, res) => {
-    const Team = require('./pages/front/Team');
-    (new Team()).print(req, res);
-  });
-
-  // FAQ
-  app.get('/faq', (req, res) => {
-    const Faq = require('./pages/front/Faq');
-    (new Faq()).print(req, res);
-  });
-
-  // Basket
-  app.get('/basket', (req, res) => {
-    const Basket = require('./pages/front/Basket');
-    (new Basket()).print(req, res);
-  });
-
   // Dashboard / Home
   app.get('/dashboard/home', (req, res) => {
     const Dashboard = require('./pages/back/Dashboard');
@@ -64,12 +34,6 @@ module.exports = app => {
   app.post('/dashboard/products/edit/:id', (req, res) => {
     const Products = require('./pages/back/Products');
     (new Products()).processEditProduct(req, res);
-  })
-
-  // Authenticated:
-  app.get('/authenticated', (req, res) => {
-    const Authenticated = require('./pages/front/Authenticated');
-    (new Authenticated()).print(req, res);
   })
 
   // Subscription

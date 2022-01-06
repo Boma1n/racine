@@ -30,6 +30,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 const RepoProduct = require('./app/repository/Product');
+let repo = new RepoProduct();
 
 // Routes
 app.get('/', (req, res) => {
@@ -37,14 +38,12 @@ app.get('/', (req, res) => {
 });
 
 app.get('/eshop', (req, res) => {
-  let repo = new RepoProduct();
   repo.find().then((products) => {
     res.render('front/pages/eshop', {products});
   })
 })
 
 app.get('/eshop/product/:id', (req, res) => {
-  let repo = new RepoProduct();
   repo.findById(req.params.id).then((product) => {
     res.render('front/pages/product', {product});
   })
@@ -52,6 +51,26 @@ app.get('/eshop/product/:id', (req, res) => {
 
 app.get('/events', (req, res) => {
   res.render('front/pages/events');
+})
+
+app.get('/stores', (req, res) => {
+  res.render('front/pages/stores');
+})
+
+app.get('/team', (req, res) => {
+  res.render('front/pages/team');
+})
+
+app.get('/faq', (req, res) => {
+  res.render('front/pages/faq');
+})
+
+app.get('/basket', (req, res) => {
+  res.render('front/pages/basket');
+})
+
+app.get('/authenticated', (req, res) => {
+  res.render('front/pages/authenticated');
 })
 
 require('./app/routes')(app);

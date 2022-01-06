@@ -1,15 +1,17 @@
+const Page = require('../../classes/Page');
 const bcrypt = require('bcryptjs');
 const RepoUser = require('../../repository/User');
 
-module.exports = class Authenticated {
-  entity;
-
-  print (req, res) {
-    res.render('front/pages/Authenticated')
-  }
-
-  checkPassword(password, secondPassword) {
-    return password === secondPassword;
+export default class Authenticated extends Page {
+  constructor() {
+    super({
+      id: 'authenticated',
+      element: '.authenticated',
+      elements: {
+        navigation: document.querySelector('.navigation'),
+        footer: document.querySelector('footer')
+      }
+    });
   }
 
   processSub (req, res) {

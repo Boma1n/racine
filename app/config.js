@@ -1,6 +1,5 @@
 module.exports = {
   port: process.env.PORT || 8080,
-  host: '0.0.0.0',
   appKey: 'cf0d9c3385323d6c70d38357a8aa9385a',
   database: {
     clusterName: 'cluster0',
