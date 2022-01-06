@@ -1,0 +1,26 @@
+.alert {
+  animation: popin 3s ease-in-out;
+  background-color: $color-black;
+  color: $color-white;
+  opacity: 0;
+  padding: .8rem 1.6rem;
+  position: absolute;
+  right: 1.6rem;
+  top: 5rem;
+  width: fit-content;
+}
+
+@keyframes popin {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

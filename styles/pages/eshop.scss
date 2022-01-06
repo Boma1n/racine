@@ -1,7 +1,19 @@
+.eshop--wrapper {
+  @include media('>desktop') {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+}
+
 .eshop--productList {
   display: flex;
   gap: 3.2rem;
   margin: 9.2rem 18.9rem;
+
+  @include media('<phone') {
+    flex-wrap: wrap;
+    margin: 1.6rem;
+  }
 }
 
 .eshop--productWrapper {

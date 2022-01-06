@@ -12,6 +12,9 @@
 @import './shared/title';
 @import './shared/descriptions';
 
+// Utils
+@import './utils/responsive';
+
 // Base:
 @import './base/fonts';
 @import './base/base';
@@ -20,6 +23,7 @@
 // Layout:
 @import './layout/navigation';
 @import './layout/footer';
+@import './layout/messages';
 
 // Pages:
 @import './pages/home';

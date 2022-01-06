@@ -7,6 +7,10 @@ footer {
   flex-direction: column;
   justify-content: center;
   padding: 3.2rem 0;
+
+  @include media('<phone') {
+    padding: 1.6rem;
+  }
 }
 
 .footer--logo {
@@ -34,11 +38,20 @@ footer {
   display: flex;
   gap: 7rem;
   justify-content: center;
+
+  @include media('<phone') {
+    flex-direction: column;
+    gap: 1.6rem;
+  }
 }
 
 .footer--elementPrimaryList {
   display: flex;
   width: 25rem;
+
+  @include media('<phone') {
+    width: auto;
+  }
 }
 
 .footer--secondaryList {
@@ -59,6 +72,10 @@ footer {
 .footer--text {
   @extend %description-16;
   color: $color-white;
+
+  @include media('<phone') {
+    display: none;
+  }
 }
 
 .footer-socialLinks {

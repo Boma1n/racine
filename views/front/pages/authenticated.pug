@@ -7,25 +7,40 @@ block content
 
   main
     if error
-      p= error
+      .alert= error
     .authenticated
       .authenticated--subscription
-        h2.authenticated--subtitle Inscription
+        h2.authenticated--subtitle= 'Inscription'
         form.authenticated--form(action='/authenticated/subscription' method='post')
-          select.authenticated--select(placeholder='Civilité' name='civility')
+          select.authenticated--select(placeholder='Civilité *' name='civility' required)
+            option.authenticated--option(value='' disabled selected) Civilité *
             option.authenticated--option(value='1') Il
             option.authenticated--option(value='2') Elle
             option.authenticated--option(value='3') Iel
-          input.authenticated--input(type='text' placeholder='Prénom' name='firstname')
-          input.authenticated--input(type='text' placeholder='Nom' name='lastname')
-          input.authenticated--input(type='email' placeholder='Email' name='email')
+          input.authenticated--input(type='text' placeholder='Prénom *' name='firstname' required)
+          input.authenticated--input(type='text' placeholder='Nom *' name='lastname' required)
+          input.authenticated--input(type='email' placeholder='Email *' name='email' required)
 
-          input.authenticated--input(type='password' placeholder='Mot de passe' name='password')
-          input.authenticated--input(type='phone' placeholder='N° de téléphone' name='phone')
+          input.authenticated--input(type='password' placeholder='Mot de passe *' name='password' minlength='8' required)
+          input.authenticated--input(type='password' placeholder='Vérifie ton mot de passe *' name='verifyPassword' minlength='8' required)
+          .authenticated--requiredPassword
+            .authenticated--requiredPasswordText
+              h3.authenticated--requiredPasswordTitle= 'Minimum :'
+              ul.authenticated--requiredPasswordList
+                li.authenticated--requiredPasswordElement= '8 caractères'
+                li.authenticated--requiredPasswordElement= '1 caractère spécial (#$@!%&*?)'
+                li.authenticated--requiredPasswordElement= '1 minuscule'
+                li.authenticated--requiredPasswordElement= '1 majuscule'
+                li.authenticated--requiredPasswordElement= '1 chiffre'
+            .authenticated--requiredPasswordSvg
+              svg(width="2.3rem" height="6.5rem" viewBox="0 0 23 65" fill="none" xmlns="http://www.w3.org/2000/svg")
+                path(d="M23 1H8V64H23.3929M9 33H0" stroke="#232323")
+
+          input.authenticated--input(type='phone' placeholder='N° de téléphone *' name='phone' maxlength='10' required)
           button.authenticated--button(type='submit') S'inscrire
       .authenticated--login
         h2.authenticated--subtitle Connexion
         form.authenticated--form(action='/authenticated/login' method='post')
           input.authenticated--input(type='email' placeholder='Votre Email' name='email')
-          input.authenticated--input(type='password' placeholder='Votre mot de passe' name='password')
+          input.authenticated--input(type='password' placeholder='Votre mot de passe' name='password' minlength='8')
           button.authenticated--button(type='submit') Connexion

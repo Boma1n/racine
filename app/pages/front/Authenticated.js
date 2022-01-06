@@ -8,6 +8,10 @@ module.exports = class Authenticated {
     res.render('front/pages/Authenticated')
   }
 
+  checkPassword(password, secondPassword) {
+    return password === secondPassword;
+  }
+
   processSub (req, res) {
     let entity = {
       civility: req.body.civility || '',
@@ -24,24 +28,32 @@ module.exports = class Authenticated {
     );
 
     let repo = new RepoUser();
-    repo.emailExists(entity.email).then(result => {
-      if(result) {
-        res.render('front/pages/Authenticated', {
-          error: 'Cette email existe déjà...',
-          form: entity
-        })
-      } else {
-        repo.add(entity).then( user => {
-          req.flash('notify', 'Votre compte a bien été créé.')
-          res.redirect('/');
-        }, e => {
+    if (req.body.password === req.body.verifyPassword) {
+      repo.emailExists(entity.email).then(result => {
+        if(result) {
           res.render('front/pages/Authenticated', {
-            error: `L'enregistrement en base  de données a échoué`,
+            error: 'Cette email existe déjà...',
             form: entity
           })
-        })
-      }
-    })
+        } else {
+          repo.add(entity).then( user => {
+            req.flash('notify', 'Votre compte a bien été créé.')
+            res.redirect('/');
+          }, e => {
+            console.log(e)
+            res.render('front/pages/Authenticated', {
+              error: `L'enregistrement en base  de données a échoué`,
+              form: entity
+            })
+          })
+        }
+      })
+    } else {
+      res.render('front/pages/Authenticated', {
+        error: 'Une erreur est survenue dans le mot de passe...',
+        from: {password: req.body.password || ''}
+      })
+    }
   }
 
   processLog (req, res) {

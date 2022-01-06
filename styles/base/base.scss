@@ -23,13 +23,23 @@ input:focus {
 html {
   font-size: calc(100vw / 1920 * 10);
   line-height: 1;
+
+  @include media('<phone') {
+    font-size: calc(100vw / 750 * 10);
+  }
+  @include media('>desktop') {
+    font-size: 10px;
+  }
 }
 
 body {
   @extend %description-16;
-
-  font-family: $font-neue-montreal;
   color: $color-black;
+  font-family: $font-neue-montreal;
+
+  @include media('>desktop') {
+    margin: 0 auto;
+  }
 }
 
 a {

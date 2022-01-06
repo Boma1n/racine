@@ -2,8 +2,20 @@
   display: flex;
   justify-content: center;
   margin-top: 19.7rem;
-  min-height: 100vh;
+  min-height: calc(100vh - 24rem);
   padding: 3.2rem 0;
+
+  @include media('<phone') {
+    flex-direction: column;
+    gap: 6.4rem;
+    justify-content: flex-start;
+    margin-top: 0;
+    min-height: auto;
+  }
+  @include media('>desktop') {
+    margin: 0 auto;
+    max-width: 1920px;
+  }
 }
 
 .authenticated--subscription {
@@ -11,7 +23,12 @@
   display: flex;
   flex-direction: column;
   gap: 9.6rem;
+  justify-content: center;
   min-width: 64rem;
+
+  @include media('<phone') {
+    gap: 1.6rem;
+  }
 }
 
 .authenticated--login {
@@ -19,7 +36,12 @@
   display: flex;
   flex-direction: column;
   gap: 9.6rem;
+  justify-content: center;
   min-width: 64rem;
+
+  @include media('<phone') {
+    gap: 1.6rem;
+  }
 }
 
 .authenticated--subtitle {
@@ -33,6 +55,12 @@
   flex-direction: column;
   gap: 3.2rem;
   justify-content: center;
+  position: relative;
+  height: 50rem;
+
+  @include media('<phone') {
+    height: auto;
+  }
 }
 
 .authenticated--select {
@@ -63,4 +91,44 @@
   font-weight: bold;
   padding: .8rem 0;
   text-transform: uppercase;
+}
+
+// Required Password :
+.authenticated--requiredPassword {
+  align-items: center;
+  display: flex;
+  gap: 0.8rem;
+  left: -26rem;
+  position: absolute;
+  top: 26.5rem;
+
+  @include media('<phone') {
+    position: initial;
+    top: 0;
+  }
+}
+
+.authenticated--requiredPasswordText {
+
+}
+
+.authenticated--requiredPasswordTitle {
+  @extend %description-16-b;
+  color: $color-portage;
+}
+
+.authenticated--requiredPasswordList {
+  @extend %description-16;
+  color: $color-portage;
+  padding-left: 0.8rem;
+}
+
+.authenticated--requiredPasswordElement {
+
+}
+
+.authenticated--requiredPasswordSvg {
+  @include media('<phone') {
+    display: none;
+  }
 }
