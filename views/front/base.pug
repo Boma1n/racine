@@ -10,11 +10,12 @@ html(lang='fr')
 
     base(href="/")
 
+    title Racine
+
     link(href="main.css" rel="stylesheet")
 
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
 
-    title Racine
   body
     header
       include ./partials/navigation.pug
@@ -27,5 +28,6 @@ html(lang='fr')
 
   .content#content(data-template=template)
     block content
-    include ./partials/footer.pug
+
+  include ./partials/footer.pug
   script(type="text/javascript" src='./main.js')

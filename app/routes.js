@@ -1,9 +1,4 @@
 module.exports = app => {
-  // Home:
-  app.get('/', (req, res) => {
-    const Home = require('./pages/front/Home');
-    (new Home()).print(req, res);
-  });
 
   // E-Shop
   app.get('/eShop', (req, res) => {

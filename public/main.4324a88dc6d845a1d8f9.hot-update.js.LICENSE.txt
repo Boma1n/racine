@@ -1,3 +1,9 @@
+/*! ./pages/front/Events */
+
+/*! ./pages/front/Home */
+
+/*! lodash/each */
+
 /*!**********************!*\
   !*** ./app/index.js ***!
   \**********************/
