@@ -14,4 +14,4 @@ block content
               p.eshop--productTitle= product.name
               p.eshop--productDescription= product.commonName
             .eshop--productBtnWrapper
-              a.eshop--productBtn(href='')= `Voir plus - ${product.price}`
+              a.eshop--productBtn(href=`/eshop/product/${product._id}`)= `Voir plus - ${product.price}`

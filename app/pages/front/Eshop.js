@@ -6,4 +6,12 @@ module.exports = class Eshop {
       res.render('front/pages/eshop', {products});
     })
   }
+
+  printProduct(req, res) {
+    let repo = new RepoProduct();
+    repo.findById(req.params.id).then((product) => {
+      console.log(product)
+      res.render('front/pages/product', {product})
+    })
+  }
 }

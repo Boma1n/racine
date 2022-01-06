@@ -10,6 +10,11 @@ module.exports = app => {
     const Eshop = require('./pages/front/Eshop');
     (new Eshop()).print(req, res);
   });
+  app.get('/eshop/product/:id', (req, res) => {
+    const Eshop = require('./pages/front/Eshop');
+    (new Eshop()).printProduct(req, res);
+  })
+
 
   // Events
   app.get('/events', (req, res) => {

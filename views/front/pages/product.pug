@@ -1,0 +1,18 @@
+extends ../base.pug
+
+block content
+  main
+    .product--wrapper
+      p= product.name
+      p= product.size
+      p= product.scientifiqueName
+      p= product.commonName
+      p= product.family
+      p= product.origin
+      p= product.location
+      p= product.descriptions
+      p= product.exposure
+      p= product.watering
+      p= product.repotting
+      p= product.price
+      button()= 'ajouter au panier'
