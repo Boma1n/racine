@@ -29,10 +29,26 @@ app.use(function(err, req, res, next) {
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
+const RepoProduct = require('./app/repository/Product');
+
 // Routes
 app.get('/', (req, res) => {
   res.render('front/pages/home')
 });
+
+app.get('/eshop', (req, res) => {
+  let repo = new RepoProduct();
+  repo.find().then((products) => {
+    res.render('front/pages/eshop', {products});
+  })
+})
+
+app.get('/eshop/product/:id', (req, res) => {
+  let repo = new RepoProduct();
+  repo.findById(req.params.id).then((product) => {
+    res.render('front/pages/product', {product});
+  })
+})
 
 app.get('/events', (req, res) => {
   res.render('front/pages/events');

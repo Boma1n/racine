@@ -32,6 +32,10 @@ html {
   }
 }
 
+html::-webkit-scrollbar {
+  width: 0;
+}
+
 body {
   @extend %description-16;
   color: $color-black;

@@ -1,0 +1,21 @@
+extends ../base.pug
+
+block variables
+  - var template = 'product'
+
+block content
+  main
+    .product--wrapper
+      h1 product Page
+      p= product.name
+      p= product.size
+      p= product.scientifiqueName
+      p= product.commonName
+      p= product.family
+      p= product.origin
+      p= product.location
+      p= product.description
+      p= product.exposure
+      p= product.watering
+      p= product.repotting
+      p= product.price

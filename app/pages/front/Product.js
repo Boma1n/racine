@@ -1,14 +1,14 @@
 import Page from 'classes/Page';
 
-export default class Eshop extends Page {
+export default class Product extends Page {
   constructor() {
     super({
-      id: 'eshop',
-      element: '.eshop--wrapper',
+      id: 'product',
+      element: '.product--wrapper',
       elements: {
         navigation: document.querySelector('.navigation'),
         footer: document.querySelector('footer')
       }
-    });
+    })
   }
 }

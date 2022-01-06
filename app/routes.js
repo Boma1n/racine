@@ -1,11 +1,5 @@
 module.exports = app => {
 
-  // E-Shop
-  app.get('/eShop', (req, res) => {
-    const Eshop = require('./pages/front/Eshop');
-    (new Eshop()).print(req, res);
-  });
-
   // Events
   app.get('/events', (req, res) => {
     const Events = require('./pages/front/Events');

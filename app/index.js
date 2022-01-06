@@ -2,6 +2,8 @@ import each from 'lodash/each';
 
 import Home from './pages/front/Home';
 import Events from './pages/front/Events';
+import Eshop from './pages/front/Eshop';
+import Product from './pages/front/Product';
 
 class App {
   constructor() {
@@ -19,13 +21,15 @@ class App {
     this.pages = {
       home: new Home(),
       events: new Events(),
+      eshop: new Eshop(),
+      product: new Product(),
     }
 
     this.page = this.pages[this.template]
     this.page.create()
   }
 
-  async onChange({ url, push = true }) {
+  async onChange({ url, name }) {
     url = url.replace(window.location.origin, '')
 
     await this.page.hide();
@@ -45,8 +49,9 @@ class App {
       this.content.innerHTML = divContent.innerHTML
 
       this.page = this.pages[this.template]
-      this.page.create()
-      this.page.show()
+      await this.page.create()
+      await this.page.show()
+      window.location.replace(url);
 
       this.addListenerLinks()
     } else {
@@ -58,6 +63,8 @@ class App {
     const links = document.querySelectorAll('a');
     each(links, link => {
       link.onclick = e => {
+        e.preventDefault();
+
         const { href } = link;
 
         this.onChange({
