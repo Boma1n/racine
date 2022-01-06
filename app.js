@@ -31,6 +31,6 @@ app.get('*', function(req, res){
   res.render('error');
 });
 
-app.listen(config.port, () => {
+app.listen(config.port, config.host, () => {
   console.log(`http://localhost:${config.port}`);
 });
